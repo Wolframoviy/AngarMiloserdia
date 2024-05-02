@@ -1,0 +1,168 @@
+/* СТИЛИ ДЛЯ ШРИФТОВ */
+
+@font-face {
+	font-display: swap;
+	font-family: main; 
+	src: url("/static/fonts/main.otf");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: bold; 
+	src: url("/static/fonts/bold.otf");
+}
+
+/* ОСНОВНЫЕ СТИЛИ */
+/* Убираем отступы и перекрашиваем фон. */
+
+body {
+	display: flex;
+	margin: 0;
+	padding: 0;
+
+	color: white;
+	font-family: main;
+	background: linear-gradient(to top right, black 40%, rgb(22, 22, 22));
+
+	
+	width: 100vw;
+	height: 100vh;
+	
+}
+
+/* Убираем декорации */
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+/* Меняем пункт списка на свой */
+
+li {
+	font-family: main;
+	list-style-type: none;
+}
+
+li:before {
+	font-family: main;
+	content: "/";
+}
+
+/* Помечаем все стили по центру */
+
+main {
+	display: flex;
+	flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+main * {
+	margin: auto;
+}
+
+
+/* СТИЛИ ДЛЯ БЛОКОВ В ПОРЯДКЕ РАСПОЛОЖЕНИЯ В ЯГТР */
+
+.LOGO {
+	width: 100%;
+	max-width: 300px;
+	height: 300px;
+}
+
+.SELECT {
+	text-align: center;
+	font-size: 30px;
+	margin-top: -40px;
+	margin-bottom: 50px;
+}
+
+.LIST {
+	display: flex;
+	flex-direction: row;
+	font-size: 20px;
+	margin-top: -30px;
+}
+
+.LIST div {
+	height: 300px;
+	width: 49vw;
+}
+
+.A {
+	border-right: 2px solid #fff;
+}
+
+.B {
+	border-left: 2px solid #fff;
+}
+
+.LIST_LEFT {
+	float: right;
+	margin-right: 20px;
+}
+
+.LIST_LEFT li {
+	clear: right;
+	float: right;
+}
+
+.LIST_RIGHT {
+	padding-left: 0px;
+	margin-left: 20px;
+}
+
+.LIST *{
+	padding-left: 0;
+}
+
+.SUBTITLE {
+	max-width: 500px;
+	text-align: center;
+	margin-top: -30px;
+}
+
+/* СТИЛИ ДЛЯ АДАПТАЦИИ НА МОБИЛЬНЫЕ ТЕЛЕФОНЫ */
+
+@media only screen and (max-width: 1750px) {
+	.discord {
+		display:none;
+	}
+}
+
+@media only screen and (max-width: 515px){
+
+	.LOGO {
+		max-width: 200px;
+		height: 200px;
+	}
+	.LIST {
+		font-size: 15px;
+	}
+	.SELECT {
+		font-size: 20px;
+	}
+	.SUBTITLE {
+		margin-top: 20px;
+		font-size: 12px;
+	}
+}
+
+@media only screen and (max-width: 400px){
+	.LIST {
+		font-size: 10px;
+	}
+}
+
+.discord {
+	position:absolute;
+	bottom:300px;
+	left:150px;
+}
+
+#VK {
+	position:absolute;
+	bottom:400px;
+	right:150px;
+}
